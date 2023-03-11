@@ -147,6 +147,7 @@ function Home() {
 
 const WrapBox = styled.div`
   width: 100%;
+  margin-top:auto;
   //
 `;
 
