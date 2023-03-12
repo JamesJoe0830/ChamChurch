@@ -58,6 +58,8 @@ const AppBar = () => {
 
 const AppBarDiv = styled.div`
   position: fixed;
+  top:0;
+  z-index:10;
   width: 100%;
   min-height: 100px;
   display: flex;

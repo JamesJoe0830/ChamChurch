@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-import AppBar from '../components/Appbar'
-
+import AppBar from "../components/Appbar";
+import WrapBox from "../styled_components/wrapBox";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -12,7 +12,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 function Home() {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
   // const albumList = [
   //   {
@@ -91,9 +91,7 @@ function Home() {
 
   return (
     <>
-    {
-        <AppBar />
-    }
+      {<AppBar />}
       <WrapBox>
         <BannerDiv>
           <BannerImg src={"../Banner.jpg"} alt="Banner" />
@@ -145,15 +143,10 @@ function Home() {
   );
 }
 
-const WrapBox = styled.div`
-  width: 100%;
-  margin-top:auto;
-  //
-`;
-
 const ContentsBoxDiv = styled.div`
   padding: 20px;
   margin-bottom: 5%;
+  width: 100%;
 `;
 const BannerDiv = styled.div`
   width: 100%;
