@@ -12,13 +12,13 @@ const AppBar = () => {
   const navigate = useNavigate();
   return (
     <AppBarDiv>
-      <LogoImg
+      <LogoImgDiv
         onClick={() => {
           navigate("/");
         }}
       >
-        <img src={"../mainlogo.png"} alt="mainLogo" />
-      </LogoImg>
+        <LogoImg src={"../mainlogo.png"} alt="mainLogo" />
+      </LogoImgDiv>
       <MenuListDiv>
         <MenuTab
           onClick={() => {
@@ -70,12 +70,20 @@ const AppBarDiv = styled.div`
   border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
   background-color: white;
 `;
-const LogoImg = styled.div`
-  display: flex;
+
+
+const LogoImg = styled.img`
   width: 20%;
+  height:100%;
+  float: left;
+  padding: 25px;
+`;
+const LogoImgDiv = styled.div`
+  display: flex;
+  width: 100%;
   height: 100px;
   justify-content: flex;
-  padding: 15px;
+
   cursor: pointer;
 `;
 const MenuListDiv = styled.div`
