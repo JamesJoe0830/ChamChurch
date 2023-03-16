@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import MainSlider from "../components/MainSlider";
 import AppBar from "../components/Appbar";
-import TitleDiv from "../styled_components/TitleDiv"
+import TitleDiv from "../styled_components/TitleDiv";
 import WrapBox from "../styled_components/wrapBox";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -98,15 +98,15 @@ function Home() {
         <BannerDiv>
           <BannerImg src={"../Banner.jpg"} alt="Banner" />
         </BannerDiv>
-        {/* <ContentsBoxDiv> */}
-          <h1>참조은 Story</h1>
-          {/* <AlbumListDiv> */}
-            {<MainSlider />}
-          {/* </AlbumListDiv> */}
-        {/* </ContentsBoxDiv> */}
+        <ContentsBoxDiv>
+        <h1>참조은 Story</h1>
+        {/* <AlbumListDiv> */}
+        {<MainSlider />}
+        {/* </AlbumListDiv> */}
+        </ContentsBoxDiv>
         <ContentsBoxDiv>
           <TitleDiv>
-          <h1>예배시간</h1>
+            <h1>예배시간</h1>
           </TitleDiv>
           <TableListDiv>
             <TableContainer component={Paper}>
@@ -147,6 +147,7 @@ function Home() {
 const ContentsBoxDiv = styled.div`
   margin-bottom: 5%;
   width: 100%;
+  margin:10px;
 `;
 const BannerDiv = styled.div`
   width: 100%;
