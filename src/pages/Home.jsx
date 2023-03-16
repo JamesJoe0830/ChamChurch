@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
+import MainSlider from "../components/MainSlider";
 import AppBar from "../components/Appbar";
+import TitleDiv from "../styled_components/TitleDiv"
 import WrapBox from "../styled_components/wrapBox";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -96,17 +98,16 @@ function Home() {
         <BannerDiv>
           <BannerImg src={"../Banner.jpg"} alt="Banner" />
         </BannerDiv>
-        <ContentsBoxDiv>
+        {/* <ContentsBoxDiv> */}
           <h1>참조은 Story</h1>
-          <AlbumListDiv>
-            <AlbumDiv>{}</AlbumDiv>
-            <AlbumDiv></AlbumDiv>
-            <AlbumDiv></AlbumDiv>
-            <AlbumDiv></AlbumDiv>
-          </AlbumListDiv>
-        </ContentsBoxDiv>
+          {/* <AlbumListDiv> */}
+            {<MainSlider />}
+          {/* </AlbumListDiv> */}
+        {/* </ContentsBoxDiv> */}
         <ContentsBoxDiv>
+          <TitleDiv>
           <h1>예배시간</h1>
+          </TitleDiv>
           <TableListDiv>
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -144,7 +145,6 @@ function Home() {
 }
 
 const ContentsBoxDiv = styled.div`
-  padding: 20px;
   margin-bottom: 5%;
   width: 100%;
 `;
@@ -156,13 +156,15 @@ const BannerImg = styled.img`
 `;
 const AlbumListDiv = styled.div`
   display: flex;
-  border: solid;
-  margin: 10px;
+
+  margin: 30px;
   padding: 10px;
   height: 300px;
 `;
 const AlbumDiv = styled.div``;
-const TableListDiv = styled.div``;
+const TableListDiv = styled.div`
+  margin: 30px;
+`;
 
 const FooterDiv = styled.div`
   display: flex;

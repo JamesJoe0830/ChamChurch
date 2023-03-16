@@ -61,7 +61,7 @@ const AppBarDiv = styled.div`
   top:0;
   z-index:10;
   width: 100%;
-  min-height: 100px;
+  max-height: 100px;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
@@ -71,21 +71,23 @@ const AppBarDiv = styled.div`
   background-color: white;
 `;
 
-
-const LogoImg = styled.img`
-  width: 20%;
-  height:100%;
-  float: left;
-  padding: 25px;
-`;
 const LogoImgDiv = styled.div`
   display: flex;
   width: 100%;
-  height: 100px;
+  height: inherit;
   justify-content: flex;
+  
 
-  cursor: pointer;
 `;
+const LogoImg = styled.img`
+  width: fit-content;
+  height: inherit;
+  float: left;
+  cursor: pointer;
+  
+  padding: 10px;
+`;
+
 const MenuListDiv = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -94,9 +96,8 @@ const MenuListDiv = styled.div`
 `;
 const MenuTab = styled.div`
   display: flex;
-  font-size: 20px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 1vw;
   float: left;
   font-weight: bold;
   cursor: pointer;

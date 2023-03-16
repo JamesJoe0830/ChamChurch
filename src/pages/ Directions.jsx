@@ -13,20 +13,23 @@ const Directions = () => {
         <DiriectionDiv>
           <h1>Ⅲ 찾아오시는 길</h1>
         </DiriectionDiv>
+        {/* <MapContainer> */}
         <MapDiv>
-        <Kakao />
+        <Kakao/>
         </MapDiv>
-        <p>참조은 교회 찾아오시는 길 안내입니다.</p>
+        {/* </MapContainer> */}
+        
       </WrapBox>
     </>
   );
 };
 const DiriectionDiv = styled.div`
-  display: flex;
+ display: flex;
   padding: 00 00 00 50px;
   margin-top: 2%;
-  color:#3c4554;
-
+  font-size:21px;
+  font-weight:300;
+  color: #3c4554;
 `;
 
 
@@ -34,7 +37,6 @@ const MapDiv =styled.div`
   display: flex;
   width: 100%;
   justify-content:center;
-
-
 `;
+
 export default Directions;
