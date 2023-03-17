@@ -49,14 +49,14 @@ export default function MainSlider() {
 const BoxDiv = styled.div`
 display:flex;
 height:200px;
-  weight: 50px;
+width:80%;
   /* margin: 10px; */
   justify-content:space-between;
-  flex-direction: row; */
+  flex-direction: row; 
 `;
 
 const AlbumImg =styled.img`
-weight:100%;
+width:95%;
 height:100%;
 `;
 

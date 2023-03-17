@@ -12,6 +12,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Footer from "../styled_components/FooterDiv";
 
 function Home() {
   const navigate = useNavigate();
@@ -99,11 +100,15 @@ function Home() {
           <BannerImg src={"../Banner.jpg"} alt="Banner" />
         </BannerDiv>
         <ContentsBoxDiv>
+        <TitleDiv>
         <h1>참조은 Story</h1>
+        </TitleDiv>
         {/* <AlbumListDiv> */}
         {<MainSlider />}
+        
         {/* </AlbumListDiv> */}
         </ContentsBoxDiv>
+        <AlbumDiv/> 
         <ContentsBoxDiv>
           <TitleDiv>
             <h1>예배시간</h1>
@@ -137,9 +142,7 @@ function Home() {
           </TableListDiv>
         </ContentsBoxDiv>
       </WrapBox>
-      <FooterDiv>
-        <h1>footer 영역 입니다.</h1>
-      </FooterDiv>
+      <Footer/>
     </>
   );
 }
@@ -162,15 +165,18 @@ const AlbumListDiv = styled.div`
   padding: 10px;
   height: 300px;
 `;
-const AlbumDiv = styled.div``;
+const AlbumDiv = styled.div`
+/* margin-bottom:30px; */
+`;
 const TableListDiv = styled.div`
-  margin: 30px;
+  margin: 5%;
 `;
 
-const FooterDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  background: gainsboro;
-`;
+// const FooterDiv = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   background: #3c4554;
+//   color: white;
+// `;
 
 export default Home;

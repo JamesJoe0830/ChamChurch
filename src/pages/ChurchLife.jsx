@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import AppBar from '../components/Appbar';
 import WrapBox from "../styled_components/wrapBox";
+import Footer from "../styled_components/FooterDiv";
 
 const ChurchLife = () => {
   return (
@@ -11,6 +12,8 @@ const ChurchLife = () => {
         <h1>Ⅳ 교회 생활</h1>
         </LifeDiv>
       </WrapBox>
+      <Footer/>
+
     </>
   );
 };

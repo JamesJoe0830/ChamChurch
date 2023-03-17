@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import AppBar from '../components/Appbar'
 import WrapBox from "../styled_components/wrapBox";
+import Footer from "../styled_components/FooterDiv";
 
 const Time = () => {
     return (
@@ -12,6 +13,7 @@ const Time = () => {
           <p>리액트 라우터를 사용해 보는 프로젝트입니다.</p>
           </TimeDiv>
         </WrapBox>
+        <Footer/>
       </>
     );
   };

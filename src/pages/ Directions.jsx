@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AppBar from "../components/Appbar";
 import Kakao from "../components/Map";
 import WrapBox from "../styled_components/wrapBox";
+import Footer from "../styled_components/FooterDiv";
 
 const Directions = () => {
   return (
@@ -18,7 +19,7 @@ const Directions = () => {
         <Kakao/>
         </MapDiv>
         {/* </MapContainer> */}
-        
+        <Footer/>
       </WrapBox>
     </>
   );
@@ -30,6 +31,7 @@ const DiriectionDiv = styled.div`
   font-size:21px;
   font-weight:300;
   color: #3c4554;
+  bottom: 0;
 `;
 
 
