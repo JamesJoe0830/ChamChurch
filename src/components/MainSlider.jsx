@@ -17,7 +17,7 @@ export default function MainSlider() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerPadding: '20px',
+    centerPadding: "20px",
     // nextArrow: <NextArrow />
   };
   return (
@@ -27,19 +27,19 @@ export default function MainSlider() {
           <AlbumImg src={"../eg.png"} alt="eg" />
         </BoxDiv>
         <BoxDiv>
-        <AlbumImg src={"../eg.png"} alt="eg" />
+          <AlbumImg src={"../eg.png"} alt="eg" />
         </BoxDiv>
         <BoxDiv>
-        <AlbumImg src={"../eg.png"} alt="eg" />
+          <AlbumImg src={"../eg.png"} alt="eg" />
         </BoxDiv>
         <BoxDiv>
-        <AlbumImg src={"../eg.png"} alt="eg" />
+          <AlbumImg src={"../eg.png"} alt="eg" />
         </BoxDiv>
         <BoxDiv>
-        <AlbumImg src={"../eg.png"} alt="eg" />
+          <AlbumImg src={"../eg.png"} alt="eg" />
         </BoxDiv>
         <BoxDiv>
-        <AlbumImg src={"../eg.png"} alt="eg" />
+          <AlbumImg src={"../eg.png"} alt="eg" />
         </BoxDiv>
       </Slider>
     </div>
@@ -47,17 +47,16 @@ export default function MainSlider() {
 }
 
 const BoxDiv = styled.div`
-display:flex;
-height:200px;
-width:80%;
+  display: flex;
+  height: 200px;
+  width: 80%;
   /* margin: 10px; */
-  justify-content:space-between;
-  flex-direction: row; 
+  justify-content: space-between;
+  flex-direction: row;
 `;
-
-const AlbumImg =styled.img`
-width:95%;
-height:100%;
+const AlbumImg = styled.img`
+  width: 95%;
+  height: 100%;
 `;
 
 // const rSlider = styled(Slider)`

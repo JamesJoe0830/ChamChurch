@@ -36,10 +36,10 @@ const FooterDiv = styled.div`
   text-align: left;
   padding: 0px;
   margin: 0px;
-  margin-top: 50px;
+  margin-top: 10px;
+  position: absolute;
+  width: 100%;
 
-position: absolute;
-width:100%
 `;
 
 const FooterImg = styled.img`
@@ -51,7 +51,7 @@ const FooterLogoDiv = styled.div`
   justify-content: center;
   align-content: center;
   width: 15%;
-  padding-left:42%;
+  padding-left: 42%;
 `;
 
 const FooterContainer = styled.div`

@@ -16,6 +16,7 @@ function Kakao() {
   const markerPosition  = new kakao.maps.LatLng(37.27680826575521, 127.0412322006258); 
   const marker = new kakao.maps.Marker({
     position: markerPosition
+  
 });
 marker.setMap(map);
 const iwContent = '<div style="padding:5px;">참조은 교회 <br><a href="https://map.kakao.com/link/map/참조은 교회,37.27680826575521,127.0412322006258" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/참조은 교회,37.27680826575521,127.0412322006258" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
@@ -33,10 +34,22 @@ infowindow.open(map, marker);
 function setZoomable(zoomable) {
   map.setZoomable(zoomable);
 }
-setZoomable(false); // 확대 , 축소 못하도록 
+setZoomable(false); // 확대 , 축소 못하도록 f
 
+function resizeMap() {
+  var mapContainer = document.getElementById('map');
+  mapContainer.style.width = '650px';
+  mapContainer.style.height = '650px'; 
+}
+function relayout() {    
+    
+  // 지도를 표시하는 div 크기를 변경한 이후 지도가 정상적으로 표출되지 않을 수도 있습니다
+  // 크기를 변경한 이후에는 반드시  map.relayout 함수를 호출해야 합니다 
+  // window의 resize 이벤트에 의한 크기변경은 map.relayout 함수가 자동으로 호출됩니다
+  map.relayout();
+}
 }, [])
-  return <div id="map" style={{ width: "85%", height: "500px" }}></div>;
+  return <div id="map" style={{ width: "85%", height: "450px" }}></div>;
 }
 
 

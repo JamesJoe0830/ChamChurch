@@ -8,7 +8,7 @@ const WrapBox = styled.div`
   min-height: 100vh;
   position: relative;
   padding-bottom:60px;
-
+  
 `;
 
 

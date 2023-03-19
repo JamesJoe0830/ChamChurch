@@ -43,23 +43,34 @@ const Welcome = () => {
           </PastorDiv>
         </ContentsBoxDiv>
         {<SubList />}
+        <ContentsBoxDiv>
         <CurchMissionDiv>
           <CurchContents>
-            “ 참조은교회의 사명은 주님의 지상명령을 수행하며 깊은 곳에 가서
+            “참조은교회의 사명은 주님의 지상명령을 수행하며 깊은 곳에 가서
             그물을 내려 복음을 전하며 가르쳐 지키게 함에 있습니다 (마태복음
             28:19~20). “ ✝️ 참조은교회는 주님이 웃음지음을 목적하는 선교적
             교회이며 성도들이 하나님 말씀을 배우며, 삶으로 응답하는 삶을
             추구합니다.
           </CurchContents>
         </CurchMissionDiv>
+        </ContentsBoxDiv>
         {<SubList />}
+        <ContentsBoxDiv>
         <SloganDiv>
           <h1>“S.M.I.L.E”</h1>
           <SloganContents>
-          <p>웃음이 있는 교회</p>
-          <p>웃음이 넘치는 사역</p>
+            <p>웃음이 있는 교회</p>
+            <p>웃음이 넘치는 사역</p>
           </SloganContents>
+          <SloganBoxDiv>
+          <SloganItemDiv><b>"Serve"</b><p>봉사하다</p></SloganItemDiv>
+          <SloganItemDiv><b>"Missionize"</b><p>사역하다</p></SloganItemDiv>
+          <SloganItemDiv><b>"Identify"</b><p>확인하다</p></SloganItemDiv>
+          <SloganItemDiv><b>"Learn"</b><p>배우다</p></SloganItemDiv>
+          <SloganItemDiv><b>"Educate"</b><p>가르치다</p></SloganItemDiv>
+          </SloganBoxDiv>
         </SloganDiv>
+        </ContentsBoxDiv>
       </WrapBox>
       <Footer />
     </>
@@ -78,6 +89,7 @@ const WelcomeDiv = styled.div`
 
 const ContentsBoxDiv = styled.div`
   display: flex;
+  height:100%;
   justify-content: space-between;
   margin: 2.5%;
 `;
@@ -106,6 +118,7 @@ const CurchImg = styled.img`
 `;
 const CurchInfoContents = styled.div`
   background-color: #d3d3d3;
+  padding:5%;
   margin-left: 100px;
 `;
 
@@ -126,7 +139,7 @@ const PastorContents = styled.div`
 const PastorImgDiv = styled.div`
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 60px;
 `;
 
 const PastorImg = styled.img`
@@ -137,7 +150,7 @@ const PastorImg = styled.img`
 `;
 const CurchMissionDiv = styled.div`
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   width: 100%;
   height: 40vh;
   margin-bottom: 5%;
@@ -146,10 +159,11 @@ const CurchMissionDiv = styled.div`
 `;
 
 const CurchContents = styled.div`
+display:flex;
+align-content: center;
   width: 100%;
   height: 100%;
-  /* padding: 7%; */
-  font-size: 100%;
+  padding: 5%;
   text-align: center;
   overflow-wrap: break-word;
   display: flex;
@@ -157,14 +171,28 @@ const CurchContents = styled.div`
 `;
 const SloganDiv = styled.div`
   width: 100%;
-  height: 40vh;
-  margin-bottom: 5%;
+  height: 60vh;
+  /* margin-bottom: 5%; */
   text-align: center;
   background-color: #d3d3d3;
 `;
 const SloganContents = styled.div`
-width: 100%;
-  height: 100%;
-  justify-content:center;
+  width: 100%;
+  justify-content: center;
+  padding-bottom:20px;  
 `;
+const SloganBoxDiv = styled.div`
+  display:flex;
+  justify-content: space-around;
+ 
+`;
+const SloganItemDiv =styled.div`
+  display: grid;
+  align-items:center;
+  color: Black;
+  width: 15%;
+  height: 30vh;
+  background-color:white;
+
+`
 export default Welcome;

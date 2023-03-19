@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
-
 const SubTitle = {
-    first: '담임목사님 소개',
-    second: '참조은교회의 사명',
-    third: '슬로건'
-  };
+  first: "담임목사님 소개",
+  second: "참조은교회의 사명",
+  third: "슬로건",
+};
 
 const SubList = () => {
   return (
@@ -19,20 +18,18 @@ const SubList = () => {
   );
 };
 
-  const SubListDiv =styled.div`
-  display:flex;
-  justify-content:flex-end;
-  width:100%;
-  height:100%;
+const SubListDiv = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
 `;
-const SubMenu =styled.div`
-  font-size: cal(100%-10px);
-  font-weight:bolder;
-  /* margin:10px; */
+const SubMenu = styled.div`
+  font-size: calc(8px + 2vmin);
+  font-weight: bolder;
   color: #3c4554;
-margin-right: 20px;
-  
+  margin-right: 20px;
+  text-align: right;
 `;
 
-
-  export default SubList;
+export default SubList;
