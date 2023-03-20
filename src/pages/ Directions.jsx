@@ -97,7 +97,8 @@ const ContentsBox = styled.div`
 `;
 const ImgBoxDiv = styled.div`
   display: flex;
-  width: 100px;
+  width: 120px;
+
 `;
 const LocationImg = styled.img`
   width: 100%;
