@@ -5,13 +5,7 @@ import MainSlider from "../components/MainSlider";
 import AppBar from "../components/Appbar";
 import TitleDiv from "../styled_components/TitleDiv";
 import WrapBox from "../styled_components/wrapBox";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import TimeTable from "../components/Table";
 import Footer from "../styled_components/FooterDiv";
 
 function Home() {
@@ -65,33 +59,6 @@ function Home() {
   //   },
   // ]
 
-  const tableContents = [
-    {
-      type: "oo예배",
-      time: "오전 00:00",
-      location: "2층 참좋은교회 강당",
-      pastor: "oo목사님",
-    },
-    {
-      type: "oo예배",
-      time: "오전 00:00",
-      location: "2층 참좋은교회 강당",
-      pastor: "oo목사님",
-    },
-    {
-      type: "oo예배",
-      time: "오전 00:00",
-      location: "2층 참좋은교회 강당",
-      pastor: "oo목사님",
-    },
-    {
-      type: "oo예배",
-      time: "오전 00:00",
-      location: "2층 참좋은교회 강당",
-      pastor: "oo목사님",
-    },
-  ];
-
   return (
     <>
       {<AppBar />}
@@ -113,33 +80,7 @@ function Home() {
           <TitleDiv>
             <h1>예배시간</h1>
           </TitleDiv>
-          <TableListDiv>
-            <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
-                  <TableRow>
-                    <TableCell align="center">구분</TableCell>
-                    <TableCell align="center">예배시간</TableCell>
-                    <TableCell align="center">예배장소</TableCell>
-                    <TableCell align="center">목사님</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {tableContents.map((row) => (
-                    <TableRow
-                      key={row.name}
-                      sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                    >
-                      <TableCell align="center">{row.type}</TableCell>
-                      <TableCell align="center">{row.time}</TableCell>
-                      <TableCell align="center">{row.location}</TableCell>
-                      <TableCell align="center">{row.pastor}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </TableListDiv>
+          <TimeTable/>
         </ContentsBoxDiv>
       </WrapBox>
       <Footer/>
@@ -160,7 +101,6 @@ const BannerImg = styled.img`
 `;
 const AlbumListDiv = styled.div`
   display: flex;
-
   margin: 30px;
   padding: 10px;
   height: 300px;
@@ -168,9 +108,7 @@ const AlbumListDiv = styled.div`
 const AlbumDiv = styled.div`
 /* margin-bottom:30px; */
 `;
-const TableListDiv = styled.div`
-  margin: 5%;
-`;
+
 
 // const FooterDiv = styled.div`
 //   display: flex;

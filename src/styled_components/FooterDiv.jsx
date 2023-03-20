@@ -9,9 +9,9 @@ function Footer() {
             <FooterImg src={"../Footerlogo.png"} alt="FooterLogo" />
           </FooterLogoDiv>
           <FooterContent>
-            <Address>경기도 수원시 팔달구 중부대로223번길 20-7</Address>
+            <Address>(16497) 경기도 수원시 팔달구 중부대로223번길 20-7 (우만동) 참조은교회</Address>
             <Tel>Tel. 070-5033-9006</Tel>
-            <Fax>ddd</Fax>
+            <Provided>Provide by Aidder</Provided>
           </FooterContent>
         </FooterContainer>
       </FooterDiv>
@@ -28,7 +28,7 @@ const FooterDiv = styled.div`
   padding-bottom: 20px;
   text-align: center;
   font-family: SpoqaHanSans;
-  font-size: 16px;
+  font-size: 1.5vw;
   font-weight: 600;
   letter-spacing: 0px;
   line-height: 1.6;
@@ -68,11 +68,13 @@ const FooterContent = styled.div`
 `;
 const Address = styled.div`
   width: 100%;
+  padding-top: 20px;
 `;
 const Tel = styled.div`
   width: 100%;
 `;
-const Fax = styled.div`
+const Provided = styled.div`
+  padding-top: 10px;
   width: 100%;
 `;
 export default Footer;

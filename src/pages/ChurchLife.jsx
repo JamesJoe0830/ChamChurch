@@ -22,7 +22,7 @@ const LifeDiv = styled.div`
   display: flex;
   padding: 00 00 00 50px;
   margin-top: 2%;
-  font-size:21px;
+  font-size:1.8vw;
   font-weight:300;
   color: #3c4554;
 `;

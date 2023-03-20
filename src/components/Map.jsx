@@ -36,18 +36,13 @@ function setZoomable(zoomable) {
 }
 setZoomable(false); // 확대 , 축소 못하도록 f
 
-function resizeMap() {
-  var mapContainer = document.getElementById('map');
-  mapContainer.style.width = '650px';
-  mapContainer.style.height = '650px'; 
-}
-function relayout() {    
-    
-  // 지도를 표시하는 div 크기를 변경한 이후 지도가 정상적으로 표출되지 않을 수도 있습니다
-  // 크기를 변경한 이후에는 반드시  map.relayout 함수를 호출해야 합니다 
-  // window의 resize 이벤트에 의한 크기변경은 map.relayout 함수가 자동으로 호출됩니다
-  map.relayout();
-}
+
+window.addEventListener('resize', function()
+{
+    var markerPosition = marker.getPosition(); 
+    map.relayout();
+    map.setCenter(markerPosition);
+}) // 리사이즈시 마커 중심 그대로 지정 
 }, [])
   return <div id="map" style={{ width: "85%", height: "450px" }}></div>;
 }

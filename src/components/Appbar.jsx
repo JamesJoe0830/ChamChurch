@@ -58,8 +58,8 @@ const AppBar = () => {
 
 const AppBarDiv = styled.div`
   position: fixed;
-  top:0;
-  z-index:10;
+  top: 0;
+  z-index: 10;
   width: 100%;
   max-height: 100px;
   display: flex;
@@ -76,29 +76,28 @@ const LogoImgDiv = styled.div`
   width: 100%;
   height: inherit;
   justify-content: flex;
-  
-
 `;
 const LogoImg = styled.img`
   width: fit-content;
   height: inherit;
   float: left;
   cursor: pointer;
-  
   padding: 10px;
 `;
 
 const MenuListDiv = styled.div`
   display: flex;
   justify-content: flex-end;
+  width:100%;
+  height:100%;
   margin: 30px;
   margin-top: 40px;
 `;
 const MenuTab = styled.div`
   display: flex;
   padding: 10px;
-  font-size: 1vw;
-  float: left;
+  font-size: 13px;
+  /* float: left; */
   font-weight: bold;
   cursor: pointer;
 `;

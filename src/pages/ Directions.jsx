@@ -1,4 +1,4 @@
-import styledEngine from "@mui/styled-engine";
+// import styledEngine from "@mui/styled-engine";
 import styled from "styled-components";
 import AppBar from "../components/Appbar";
 import Kakao from "../components/Map";
@@ -66,7 +66,7 @@ const DiriectionDiv = styled.div`
   display: flex;
   padding: 00 00 00 50px;
   margin-top: 2%;
-  font-size: 21px;
+  font-size:1.8vw;
   font-weight: 300px;
   color: #3c4554;
   bottom: 0;
@@ -80,7 +80,7 @@ const MapDiv = styled.div`
 `;
 const SubTitleDiv = styled.div`
   position: relative;
-  margin-top: 1.2rem;
+  margin-top: 3rem;
   margin-bottom: 12px;
   padding-left: 20px;
   color: #3c4554;

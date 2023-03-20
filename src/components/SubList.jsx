@@ -28,7 +28,7 @@ const SubMenu = styled.div`
   font-size: calc(8px + 2vmin);
   font-weight: bolder;
   color: #3c4554;
-  margin-right: 20px;
+  margin-right: 2.5%;
   text-align: right;
 `;
 
