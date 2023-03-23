@@ -66,12 +66,12 @@ const AppBar = () => {
 };
 
 const AppBarDiv = styled.div`
+  display: flex;
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
-  max-height: 100px;
-  display: flex;
+  max-height:95px;
   -webkit-box-pack: justify;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
@@ -82,7 +82,7 @@ const AppBarDiv = styled.div`
 
 const LogoImgDiv = styled.div`
   display: flex;
-  width: 100%;
+  min-width: 40%;
   height: inherit;
   justify-content: flex;
 `;
@@ -105,7 +105,7 @@ const MenuListDiv = styled.div`
 const MenuTab = styled.div`
   display: flex;
   padding: 10px;
-  font-size: 13px;
+  font-size: 1.5vw;
   /* float: left; */
   font-weight: bold;
   cursor: pointer;

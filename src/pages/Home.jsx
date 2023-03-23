@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-
-import MainSlider from "../components/MainSlider";
+import BannerSlider from "../components/BannerSlider"
 import AppBar from "../components/Appbar";
 import HomeTitleDiv from "../styled_components/HomeTitleDiv";
 import WrapBox from "../styled_components/wrapBox";
 import TimeTable from "../components/Table";
 import Footer from "../styled_components/FooterDiv";
+import AlbumSlider from "../components/AlbumSlider";
 
 function Home() {
   const navigate = useNavigate();
@@ -64,18 +64,14 @@ function Home() {
       {<AppBar />}
       <WrapBox>
         <BannerDiv>
-          <BannerImg src={"../Banner.jpg"} alt="Banner" />
+        <BannerSlider/>
         </BannerDiv>
         <ContentsBoxDiv>
         <HomeTitleDiv>
         <h1>참조은 Story</h1>
         </HomeTitleDiv>
-        {/* <AlbumListDiv> */}
-        {<MainSlider />}
-        
-        {/* </AlbumListDiv> */}
+         <AlbumSlider/>
         </ContentsBoxDiv>
-        <AlbumDiv/> 
         <ContentsBoxDiv>
           <HomeTitleDiv>
             <h1>예배시간</h1>
@@ -90,23 +86,14 @@ function Home() {
 
 const ContentsBoxDiv = styled.div`
   margin-bottom: 5%;
-  width: 100%;
-  margin:10px;
+  margin:3%;
 `;
 const BannerDiv = styled.div`
+  margin-top: 5%;
   width: 100%;
 `;
 const BannerImg = styled.img`
   width: 100%;
-`;
-const AlbumListDiv = styled.div`
-  display: flex;
-  margin: 30px;
-  padding: 10px;
-  height: 300px;
-`;
-const AlbumDiv = styled.div`
-/* margin-bottom:30px; */
 `;
 
 

@@ -5,6 +5,7 @@ import Kakao from "../components/Map";
 import WrapBox from "../styled_components/wrapBox";
 import Footer from "../styled_components/FooterDiv";
 import TitleDiv from "../styled_components/TitleDiv";
+import LineDiv from "../styled_components/LineDiv";
 
 const Directions = () => {
   // const BusList = {
@@ -23,8 +24,10 @@ const Directions = () => {
       {<AppBar />}
       <WrapBox>
         <TitleDiv>
-          <h1>Ⅲ 찾아오시는 길</h1>
+          <h1>찾아오시는 길</h1>
         </TitleDiv>
+        <LineDiv/>
+
         {/* <MapContainer> */}
         <MapDiv>
           <Kakao />

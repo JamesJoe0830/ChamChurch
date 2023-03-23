@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Welcome from './pages/Welcome';
 import Home from './pages/Home';
 import Time from './pages/Time';
-import Directions from './pages/ Directions';
+import Directions from './pages/Directions';
 import ChurchLife from './pages/ChurchLife';
 
 

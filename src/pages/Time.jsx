@@ -4,6 +4,7 @@ import WrapBox from "../styled_components/wrapBox";
 import Footer from "../styled_components/FooterDiv";
 import TimeTable from "../components/Table";
 import TitleDiv from "../styled_components/TitleDiv";
+import LineDiv from "../styled_components/LineDiv";
 
 const Time = () => {
     return (
@@ -11,14 +12,17 @@ const Time = () => {
       <AppBar/>
         <WrapBox>
           <TitleDiv>
-          <h1>Ⅱ 예배시간</h1>
+          <h1>예배시간</h1>
           </TitleDiv>
+          <LineDiv/>
           <TimeTable/>
         </WrapBox>
         <Footer/>
       </>
     );
   };
+  
+
   const TimeDiv = styled.div`
   display: flex;
   padding: 00 00 00 50px;
