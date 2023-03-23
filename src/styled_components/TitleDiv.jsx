@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 const TitleDiv = styled.div`
-  width: 100%;
-  margin-top:100px;
+  display: flex;
+  padding: 00 00 00 50px;
+  margin-top: 1.2%;
+  font-size: 1.7vw;
+  font-weight: 300px;
   color: #3c4554;
-  font-size:1.6vw;
-
+  bottom: 0;
 `;
-
 
 export default TitleDiv;

@@ -3,22 +3,23 @@ import AppBar from "../components/Appbar";
 import WrapBox from "../styled_components/wrapBox";
 import SubList from "../components/SubList";
 import Footer from "../styled_components/FooterDiv";
+import TitleDiv from "../styled_components/TitleDiv";
 
 const Welcome = () => {
   return (
     <>
       {<AppBar />}
       <WrapBox>
-        <WelcomeDiv>
+        <TitleDiv>
           <h1>Ⅰ 환영합니다</h1>
-        </WelcomeDiv>
+        </TitleDiv>
         <ContentsBoxDiv>
           {/* <CurchInfo> */}
           <CurchImgDiv>
-            <CurchImg src={"../eg.png"} alt="eg" />
+            <CurchImg src={"../Welcome.png"} alt="Welcome" />
           </CurchImgDiv>
           <CurchInfoContents>
-            <h1>참조은 교회는 웃음지음을 목적하는 선교적 교회입니다.</h1>,
+            <h2>참조은 교회는 웃음지음을 목적하는 선교적 교회입니다.</h2>,
             <h2>“하나님 보시기에 참좋은 교회가 되자!(창세기 1:31)” </h2>{" "}
             참조은교회는 , 수원제일교회나 창훈대교회와 같은
             대한예수교장로회(합동) 소속이며 수원노회에 가입되어 있습니다
@@ -92,15 +93,6 @@ const Welcome = () => {
   );
 };
 
-const WelcomeDiv = styled.div`
-  display: flex;
-  width: 100%;
-  padding: 00 00 00 50px;
-  margin-top: 2%;
-  font-size: 1.8vw;
-  font-weight: 300;
-  color: #3c4554;
-`;
 
 const ContentsBoxDiv = styled.div`
   display: flex;

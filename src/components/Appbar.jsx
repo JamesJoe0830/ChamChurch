@@ -7,6 +7,10 @@ const AppBarContent = {
   Path: "찾아오시는길",
   label: "교회 생활",
 };
+const MoveToTop = () => {
+  window.scrollTo({top:0, behavior:'smooth'});
+}; // 상단으로 이동 (beahvior : auto, smooth)
+
 
 const AppBar = () => {
   const navigate = useNavigate();
@@ -15,6 +19,7 @@ const AppBar = () => {
       <LogoImgDiv
         onClick={() => {
           navigate("/");
+          MoveToTop();
         }}
       >
         <LogoImg src={"../mainlogo.png"} alt="mainLogo" />
@@ -23,6 +28,7 @@ const AppBar = () => {
         <MenuTab
           onClick={() => {
             navigate("/welcome");
+            MoveToTop();
           }}
         >
           {" "}
@@ -31,6 +37,7 @@ const AppBar = () => {
         <MenuTab
           onClick={() => {
             navigate("/time");
+            MoveToTop();
           }}
         >
           {AppBarContent.Time}{" "}
@@ -38,6 +45,7 @@ const AppBar = () => {
         <MenuTab
           onClick={() => {
             navigate("/directions");
+            MoveToTop();
           }}
         >
           {" "}
@@ -46,6 +54,7 @@ const AppBar = () => {
         <MenuTab
           onClick={() => {
             navigate("/churchLife");
+            MoveToTop();
           }}
         >
           {" "}

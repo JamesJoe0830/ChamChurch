@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import MainSlider from "../components/MainSlider";
 import AppBar from "../components/Appbar";
-import TitleDiv from "../styled_components/TitleDiv";
+import HomeTitleDiv from "../styled_components/HomeTitleDiv";
 import WrapBox from "../styled_components/wrapBox";
 import TimeTable from "../components/Table";
 import Footer from "../styled_components/FooterDiv";
@@ -67,9 +67,9 @@ function Home() {
           <BannerImg src={"../Banner.jpg"} alt="Banner" />
         </BannerDiv>
         <ContentsBoxDiv>
-        <TitleDiv>
+        <HomeTitleDiv>
         <h1>참조은 Story</h1>
-        </TitleDiv>
+        </HomeTitleDiv>
         {/* <AlbumListDiv> */}
         {<MainSlider />}
         
@@ -77,9 +77,9 @@ function Home() {
         </ContentsBoxDiv>
         <AlbumDiv/> 
         <ContentsBoxDiv>
-          <TitleDiv>
+          <HomeTitleDiv>
             <h1>예배시간</h1>
-          </TitleDiv>
+          </HomeTitleDiv>
           <TimeTable/>
         </ContentsBoxDiv>
       </WrapBox>

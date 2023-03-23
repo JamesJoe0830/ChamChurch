@@ -4,6 +4,7 @@ import AppBar from "../components/Appbar";
 import Kakao from "../components/Map";
 import WrapBox from "../styled_components/wrapBox";
 import Footer from "../styled_components/FooterDiv";
+import TitleDiv from "../styled_components/TitleDiv";
 
 const Directions = () => {
   // const BusList = {
@@ -21,9 +22,9 @@ const Directions = () => {
     <>
       {<AppBar />}
       <WrapBox>
-        <DiriectionDiv>
+        <TitleDiv>
           <h1>Ⅲ 찾아오시는 길</h1>
-        </DiriectionDiv>
+        </TitleDiv>
         {/* <MapContainer> */}
         <MapDiv>
           <Kakao />
@@ -62,15 +63,6 @@ const Directions = () => {
     </>
   );
 };
-const DiriectionDiv = styled.div`
-  display: flex;
-  padding: 00 00 00 50px;
-  margin-top: 2%;
-  font-size:1.8vw;
-  font-weight: 300px;
-  color: #3c4554;
-  bottom: 0;
-`;
 
 const MapDiv = styled.div`
   display: flex;
@@ -93,12 +85,10 @@ const ContentsBox = styled.div`
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
-
 `;
 const ImgBoxDiv = styled.div`
   display: flex;
   width: 120px;
-
 `;
 const LocationImg = styled.img`
   width: 100%;
@@ -149,6 +139,7 @@ const BusType = styled.div`
   font-weight: 700;
 `;
 const BusArr = styled.div`
-  color: #5a5a5a`;
+  color: #5a5a5a;
+`;
 
 export default Directions;

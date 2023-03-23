@@ -3,15 +3,16 @@ import AppBar from '../components/Appbar'
 import WrapBox from "../styled_components/wrapBox";
 import Footer from "../styled_components/FooterDiv";
 import TimeTable from "../components/Table";
+import TitleDiv from "../styled_components/TitleDiv";
 
 const Time = () => {
     return (
       <>
       <AppBar/>
         <WrapBox>
-          <TimeDiv>
+          <TitleDiv>
           <h1>Ⅱ 예배시간</h1>
-          </TimeDiv>
+          </TitleDiv>
           <TimeTable/>
         </WrapBox>
         <Footer/>
