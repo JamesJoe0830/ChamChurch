@@ -9,7 +9,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "grey" }}
+      style={{ ...style, display: "block", background: "Black", opacity : "0.8"}}
       onClick={onClick}
     />
   );

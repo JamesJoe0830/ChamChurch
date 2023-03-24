@@ -1,4 +1,5 @@
 // import styledEngine from "@mui/styled-engine";
+import React from "react";
 import styled from "styled-components";
 import AppBar from "../components/Appbar";
 import Kakao from "../components/Map";
@@ -8,11 +9,6 @@ import TitleDiv from "../styled_components/TitleDiv";
 import LineDiv from "../styled_components/LineDiv";
 
 const Directions = () => {
-  // const BusList = {
-  //   village: "마을버스",
-  //   city: "일반버스",
-  //   wide:"광역버스"
-  // };
   const BusList = [
     {
       type: "일반버스",
@@ -26,13 +22,12 @@ const Directions = () => {
         <TitleDiv>
           <h1>찾아오시는 길</h1>
         </TitleDiv>
-        <LineDiv/>
+        <LineDiv />
 
-        {/* <MapContainer> */}
         <MapDiv>
           <Kakao />
         </MapDiv>
-        {/* </MapContainer> */}
+
         <SubTitleDiv>- 주소와 연락처</SubTitleDiv>
 
         <ContentsBox>
