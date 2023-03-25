@@ -4,8 +4,6 @@ import styled from "styled-components";
 import { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { render } from "@testing-library/react";
-
 
 export default class AlbumSlider extends Component {
   render() {
@@ -15,13 +13,8 @@ export default class AlbumSlider extends Component {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // prevArrow :  (<PrevTo>
-
-    // </PrevTo>),  
-
-    // nextArrow : (<NextTo>
-
-    // </NextTo>)
+    prevArrow : <StyledPrevArrow/>,
+    nextArrow : <StyledNextArrow/>,
    
     responsive: [ // 반응형 웹 구현 옵션
 		{  
@@ -75,26 +68,7 @@ export default class AlbumSlider extends Component {
     </div>
   );
 }
-}
-const NextTo = styled.div`
-  position: absolute;
-  margin-right:30px;
-  z-index: 3;
-
-`;
-
-const PrevTo = styled.div`
-  position: absolute;
-  margin-left:30px;
-  z-index: 3;
-`;
-const Nextimg = styled.img`
-  width:100%;
-`;
-
-const Previmg = styled.img`
-  width:100%;
-`;
+} 
 
 const BoxDiv = styled.div`
     /* display: flex;
@@ -107,7 +81,7 @@ const BoxDiv = styled.div`
 `;
 
 const AlbumImg = styled.img`
-  width: 98%;
+  width: 95%;
   height: 100%;
 `;
 
@@ -117,4 +91,39 @@ const StyledSlider = styled(Slider)`
   justify-content: space-around ;
   flex-direction:row; 
   position: relative;
+  margin:1.5%;
+`;
+
+const StyledPrevArrow = styled.div`
+  position: absolute;
+  margin-left: 11px;
+  z-index: 3;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    border-top: 5px solid #000;
+    border-left: 5px solid #000;
+    width: 10px;
+    height: 10px;
+    transform: rotate(315deg);
+    margin-right: 10px;
+  }
+`;
+
+const StyledNextArrow = styled.div`
+  position: absolute;
+  margin-right: 22px;
+  z-index: 3;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    border-top: 5px solid #000;
+    border-right: 5px solid #000;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    margin-left: 10px;
+  }
 `;

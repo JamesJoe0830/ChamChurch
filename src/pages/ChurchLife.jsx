@@ -4,6 +4,8 @@ import WrapBox from "../styled_components/wrapBox";
 import Footer from "../styled_components/FooterDiv";
 import TitleDiv from "../styled_components/TitleDiv";
 import LineDiv from "../styled_components/LineDiv";
+
+
 // const Box = () => {
 //   return (
 //     <>
@@ -31,22 +33,26 @@ const ChurchLife = () => {
         <LineDiv />
         {/* <Box /> */}
         <ContentBox>
-            <BlogDiv><BlogImg src={'Banner.png'}/></BlogDiv>
-            <BlogDiv></BlogDiv>
-            <BlogDiv></BlogDiv>
-          </ContentBox>
-          <ContentBox>
-            <BlogDiv></BlogDiv>
-            <BlogDiv></BlogDiv>
-            <BlogDiv></BlogDiv>
-          </ContentBox>
-          <ContentBox>
-            <BlogDiv></BlogDiv>
-            <BlogDiv></BlogDiv>
-            <BlogDiv></BlogDiv>
-          </ContentBox>
+          <BlogDiv>
+            <BlogImg src={"Banner.png"} />
+          </BlogDiv>
+          <BlogDiv></BlogDiv>
+          <BlogDiv></BlogDiv>
+        </ContentBox>
+        <ContentBox>
+          <BlogDiv></BlogDiv>
+          <BlogDiv></BlogDiv>
+          <BlogDiv></BlogDiv>
+        </ContentBox>
+        <ContentBox>
+          <BlogDiv></BlogDiv>
+          <BlogDiv></BlogDiv>
+          <BlogDiv></BlogDiv>
+        </ContentBox>
+
       </WrapBox>
       <Footer />
+      
     </>
   );
 };
@@ -64,9 +70,8 @@ const BlogDiv = styled.div`
   margin: 1%;
 `;
 const BlogImg = styled.img`
-width:100%;
-height:100%;
-
+  width: 100%;
+  height: 100%;
 `;
 
 export default ChurchLife;
