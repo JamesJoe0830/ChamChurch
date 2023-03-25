@@ -22,7 +22,7 @@ const AppBar = () => {
           MoveToTop();
         }}
       >
-        <LogoImg src={"../mainlogo.png"} alt="mainLogo" />
+        <LogoImg src={"../mainlogo1.png"} alt="mainLogo" />
       </LogoImgDiv>
       <MenuListDiv>
         <MenuTab
@@ -72,7 +72,7 @@ const AppBarDiv = styled.div`
   z-index: 10;
   width: 100%;
   max-height:95px;
-  -webkit-box-pack: justify;
+
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: black;
@@ -82,13 +82,15 @@ const AppBarDiv = styled.div`
 
 const LogoImgDiv = styled.div`
   display: flex;
-  min-width: 40%;
-  height: inherit;
-  justify-content: flex;
+  /* min-width: 40%; */
+  width:100px;
+  /* height: inherit; */
+
 `;
 const LogoImg = styled.img`
   width: fit-content;
   height: inherit;
+  max-height:100px;   
   float: left;
   cursor: pointer;
   padding: 10px;
@@ -97,8 +99,8 @@ const LogoImg = styled.img`
 const MenuListDiv = styled.div`
   display: flex;
   justify-content: flex-end;
-  width:100%;
-  height:100%;
+  /* width:100%; */
+  /* height:100%; */
   margin: 30px;
   margin-top: 40px;
 `;
