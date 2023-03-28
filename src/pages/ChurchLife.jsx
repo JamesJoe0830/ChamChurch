@@ -5,6 +5,7 @@ import Footer from "../styled_components/FooterDiv";
 import TitleDiv from "../styled_components/TitleDiv";
 import LineDiv from "../styled_components/LineDiv";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 // 0. 페이지 네이션 구현
 // 1. 데이터 받아와서 useState 동적으로 데이터 받아오기
@@ -51,6 +52,14 @@ const dumyData = [
     church_name: "charmjoeun",
   },
 ];
+// onClick 될때 페이지를 업로드할 것 (이유: 그때마다 api를 불러와서 데이터를 한번에 불러오는 오버헤드를 막기위함)
+// useState
+// useEffect 
+// async await
+
+  const maxIndex = 10 ;// axios.get(url/) ; // 10 
+ 
+
 
 const Page = () => {
   const [list,setList] = useState([])
@@ -70,7 +79,12 @@ const ChurchLife = () => {
             <BlogImg src={"Banner.png"} />
           </BlogDiv>
         </ContentBox>
-      </WrapBox>
+        <PaginationWrapper>
+        {Array.from({length:maxIndex},(v,i)=>
+        <PaginationButton>{i+1}</PaginationButton> )}
+        </PaginationWrapper>
+
+        </WrapBox>
       <Footer />
     </>
   );
@@ -91,6 +105,37 @@ const BlogDiv = styled.div`
 const BlogImg = styled.img`
   width: 100%;
   height: 100%;
+`;
+
+const PaginationWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+`;
+
+const PaginationButton = styled.button`
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: ${props => props.active ? 'blue' : 'transparent'};
+  color: ${props => props.active ? 'white' : 'black'};
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: green;
+    color: white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 `;
 
 export default ChurchLife;
