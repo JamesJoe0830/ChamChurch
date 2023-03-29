@@ -10,8 +10,10 @@ const SubTitle = {
   second: "참조은교회의 사명",
   third: "슬로건",
 };
-
 const Welcome = () => {
+  // const [introduce,setIntroduce] = useState([]);
+
+
   return (
     <>
       {<AppBar />}

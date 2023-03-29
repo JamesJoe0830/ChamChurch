@@ -1,19 +1,47 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const AppBarContent = {
+const logo = {
+  id: 1,
+  imgUrl:
+    "https://user-images.githubusercontent.com/73478057/228534858-690c2a3a-2116-40f5-847e-c11d81f6268d.png",
+};
+
+const appBarContent = {
   Info: "환영합니다",
   Time: "예배시간",
   Path: "찾아오시는길",
   label: "교회 생활",
 };
 const MoveToTop = () => {
-  window.scrollTo({top:0, behavior:'smooth'});
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }; // 상단으로 이동 (beahvior : auto, smooth)
-
 
 const AppBar = () => {
   const navigate = useNavigate();
+
+  const [mainLogo, setMainLogo] = useState(0);
+  const getMainLogo = async () => {
+    //TODO: getMainLogo api needed
+    setMainLogo(logo);
+  };
+  useEffect(() => {
+    getMainLogo();
+  }, []);
+
+  // const fetchData = async () => {
+  //   setMainlogo(null);
+  //   // const mainLogoList = await axios.get(
+  //   //   "https://jsonplaceholder.typicode.com/photos"
+  //   //   );
+  //     setMainlogo(mainLogoList.data);
+  //   };
+  // useEffect( () => {
+  //   fetchData();
+  // }, []);
+
   return (
     <AppBarDiv>
       <LogoImgDiv
@@ -22,7 +50,7 @@ const AppBar = () => {
           MoveToTop();
         }}
       >
-        <LogoImg src={"../mainlogo1.png"} alt="mainLogo" />
+        <LogoImg src={mainLogo.imgUrl} alt="mainLogo" />
       </LogoImgDiv>
       <MenuListDiv>
         <MenuTab
@@ -32,7 +60,7 @@ const AppBar = () => {
           }}
         >
           {" "}
-          {AppBarContent.Info}{" "}
+          {appBarContent.Info}{" "}
         </MenuTab>
         <MenuTab
           onClick={() => {
@@ -40,7 +68,7 @@ const AppBar = () => {
             MoveToTop();
           }}
         >
-          {AppBarContent.Time}{" "}
+          {appBarContent.Time}{" "}
         </MenuTab>
         <MenuTab
           onClick={() => {
@@ -49,7 +77,7 @@ const AppBar = () => {
           }}
         >
           {" "}
-          {AppBarContent.Path}{" "}
+          {appBarContent.Path}{" "}
         </MenuTab>
         <MenuTab
           onClick={() => {
@@ -58,7 +86,7 @@ const AppBar = () => {
           }}
         >
           {" "}
-          {AppBarContent.label}{" "}
+          {appBarContent.label}{" "}
         </MenuTab>
       </MenuListDiv>
     </AppBarDiv>
@@ -71,7 +99,7 @@ const AppBarDiv = styled.div`
   top: 0;
   z-index: 10;
   width: 100%;
-  max-height:95px;
+  max-height: 95px;
 
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
@@ -83,14 +111,13 @@ const AppBarDiv = styled.div`
 const LogoImgDiv = styled.div`
   display: flex;
   /* min-width: 40%; */
-  width:100px;
+  width: 100px;
   /* height: inherit; */
-
 `;
 const LogoImg = styled.img`
   width: fit-content;
   height: inherit;
-  max-height:100px;   
+  max-height: 100px;
   float: left;
   cursor: pointer;
   padding: 10px;

@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Time from './pages/Time';
 import Directions from './pages/Directions';
 import ChurchLife from './pages/ChurchLife';
-import MyComponent from './components/Apitest';
+
 const App = () => {
   return (
     <>
@@ -15,7 +15,6 @@ const App = () => {
       <Route path="/directions" element={<Directions />} />
       <Route path="/churchLife" element={<ChurchLife />} />
     </Routes>
-    {/* <MyComponent/> */}
     </>
 
   );
