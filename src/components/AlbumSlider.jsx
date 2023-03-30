@@ -37,65 +37,75 @@ const homeAlbumData = [
   },
 ];
 export default function AlbumSlider() {
-
   const [albums, setAlbum] = useState([]);
+  const [page, setPage] = useState(1);
+
+
+
   const getAlbum = async () => {
     // TODO: getBanners api needed
-    setAlbum([...homeAlbumData])
+    setAlbum([...homeAlbumData]);
+  };
+  const changePage = (e) => {
+    console.log("페이지 바뀌는중")
+    setPage(e.target.value)
+    
   }
   useEffect(() => {
+    if (page !== undefined && page !== null && page >= 1) {
     getAlbum();
-  },[]);
+    console.log("앨범 렌더링");
+    }
+  }, [page]);
 
-    const albumSettings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      prevArrow: <StyledPrevArrow />,
-      nextArrow: <StyledNextArrow />,
+  const albumSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: <StyledPrevArrow value={page} onClick = {changePage}></StyledPrevArrow>,
+    nextArrow: <StyledNextArrow />,
 
-      responsive: [
-        // 반응형 웹 구현 옵션
-        {
-          breakpoint: 1024, //화면 사이즈 960px일 때
-          settings: {
-            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-            slidesToShow: 3,
-          },
+    responsive: [
+      // 반응형 웹 구현 옵션
+      {
+        breakpoint: 1024, //화면 사이즈 960px일 때
+        settings: {
+          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+          slidesToShow: 3,
         },
-        {
-          breakpoint: 800, //화면 사이즈 768px일 때
-          settings: {
-            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-            slidesToShow: 2,
-          },
+      },
+      {
+        breakpoint: 800, //화면 사이즈 768px일 때
+        settings: {
+          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+          slidesToShow: 2,
         },
-        {
-          breakpoint: 480, //화면 사이즈 768px일 때
-          settings: {
-            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-            slidesToShow: 1,
-          },
+      },
+      {
+        breakpoint: 480, //화면 사이즈 768px일 때
+        settings: {
+          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+          slidesToShow: 1,
         },
-      ],
-    };
-    return (
-      <div>
-        <StyledSlider {...albumSettings}>
-          {albums.map((item) => {
-            return (
-              <BoxDiv key = {item.id}>
-                <AlbumImg src={item.imgUrl} alt="sampleImg" />
-              </BoxDiv>
-            );
-          })}
-        </StyledSlider>
-      </div>
-    );
-  }
-
+      },
+    ],
+  };
+  return (
+    <div>
+      <StyledSlider {...albumSettings}>
+        {homeAlbumData.map((item) => {
+          return (
+            <BoxDiv key={item.id}>
+              <AlbumImg src={item.imgUrl} alt="sampleImg" />
+            </BoxDiv>
+          );
+        })}
+      </StyledSlider>
+    </div>
+  );
+}
 
 const BoxDiv = styled.div`
   /* display: flex;
@@ -110,7 +120,6 @@ const BoxDiv = styled.div`
 const AlbumImg = styled.img`
   width: 95%;
   height: 20vw;
-  
 `;
 
 const StyledSlider = styled(Slider)`

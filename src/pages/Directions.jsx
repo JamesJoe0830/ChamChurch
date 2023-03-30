@@ -1,5 +1,7 @@
 // import styledEngine from "@mui/styled-engine";
 import React from "react";
+import { useState, useEffect } from "react";
+
 import styled from "styled-components";
 import AppBar from "../components/Appbar";
 import Kakao from "../components/Map";
@@ -8,13 +10,27 @@ import Footer from "../styled_components/FooterDiv";
 import TitleDiv from "../styled_components/TitleDiv";
 import LineDiv from "../styled_components/LineDiv";
 
+// const directionInfo = {
+//   id: 1,
+//   imgUrl:
+//     "https://user-images.githubusercontent.com/73478057/228534858-690c2a3a-2116-40f5-847e-c11d81f6268d.png",
+// };
+
+
 const Directions = () => {
-  // const BusList = [
-  //   {
-  //     type: "일반버스",
-  //     list: "3번, 10번, 10-2번, 10-5번, 11-1번, 13-4번, 15-1번, 20번, 20-1번, 27번,32번",
-  //   },
-  // ];
+  
+//   const [directionInfo, setDirectionInfo] = useState(0);
+//   const getDirectionInfo = async () => {
+//     //TODO : getDirectionInfo img API needed
+//     setDirectionInfo(directionInfo);
+//   };
+
+//   useEffect (()=> {
+//     getDirectionInfo();
+//   }, []);
+
+
+
   return (
     <>
       {<AppBar />}
@@ -28,7 +44,8 @@ const Directions = () => {
           <Kakao />
         </MapDiv>
         <BusInfoDiv>
-          <BusStationImg src={"../BusStationInfo.png"} alt="BusStationInfo"/>
+        <BusStationImg src={"../BusStationInfo.png"} alt="BusStationInfo"/>
+        {/* <BusStationImg src={"directionInfo.imgUrl"} alt="BusStationInfo"/> */}
         </BusInfoDiv>
         {/* <SubTitleDiv>- 주소와 연락처</SubTitleDiv>
 

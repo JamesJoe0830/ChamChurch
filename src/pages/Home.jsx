@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import BannerSlider from "../components/BannerSlider"
 import AppBar from "../components/Appbar";
 import HomeTitleDiv from "../styled_components/HomeTitleDiv";
@@ -9,6 +10,13 @@ import Footer from "../styled_components/FooterDiv";
 import AlbumSlider from "../components/AlbumSlider";
 
 function Home() {
+  //TODO : 배너 , 앨범 
+  const [banner,setBanners] = useState();
+  const [blog,setAlbum] = useState();
+
+
+
+
   const navigate = useNavigate();
 
   // const albumList = [
@@ -68,7 +76,7 @@ function Home() {
         </BannerDiv>
         <ContentsBoxDiv>
         <HomeTitleDiv>
-        <h1>참조은 Story</h1>
+        <h1>참조은 앨범</h1>
         </HomeTitleDiv>
          <AlbumSlider/>
         </ContentsBoxDiv>

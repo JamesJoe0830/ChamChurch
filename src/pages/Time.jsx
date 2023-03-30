@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useState, useEffect } from "react";
+
 import AppBar from '../components/Appbar'
 import WrapBox from "../styled_components/wrapBox";
 import Footer from "../styled_components/FooterDiv";
