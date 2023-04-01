@@ -1,15 +1,23 @@
 import styled from "styled-components";
 
+const footer = {
+  id: 1,
+  imgPath: "https://aiderbucket.s3.ap-northeast-2.amazonaws.com/Footerlogo.png",
+};
+
 function Footer() {
   return (
     <>
       <FooterDiv>
         <FooterContainer>
           <FooterLogoDiv>
-            <FooterImg src={"../Footerlogo.png"} alt="FooterLogo" />
+            <FooterImg src={footer.imgPath} alt="FooterLogo" />
           </FooterLogoDiv>
           <FooterContent>
-            <Address>(16497) 경기도 수원시 팔달구 중부대로223번길 20-7 (우만동) 참조은교회</Address>
+            <Address>
+              (16497) 경기도 수원시 팔달구 중부대로223번길 20-7 (우만동)
+              참조은교회
+            </Address>
             <Tel>Tel. 070-5033-9006</Tel>
             <Provided>Provide by Aidder</Provided>
           </FooterContent>
@@ -39,7 +47,6 @@ const FooterDiv = styled.div`
   margin-top: 10px;
   position: absolute;
   width: 100%;
-
 `;
 
 const FooterImg = styled.img`

@@ -6,15 +6,15 @@ import styled from "styled-components";
 import AppBar from "../components/Appbar";
 import Kakao from "../components/Map";
 import WrapBox from "../styled_components/wrapBox";
-import Footer from "../styled_components/FooterDiv";
+import Footer from "../components/FooterDiv";
 import TitleDiv from "../styled_components/TitleDiv";
 import LineDiv from "../styled_components/LineDiv";
 
-// const directionInfo = {
-//   id: 1,
-//   imgUrl:
-//     "https://user-images.githubusercontent.com/73478057/228534858-690c2a3a-2116-40f5-847e-c11d81f6268d.png",
-// };
+const directionInfo = {
+  id: 1,
+  imgUrl:
+    "https://aiderbucket.s3.ap-northeast-2.amazonaws.com/BusStationInfo.png",
+};
 
 
 const Directions = () => {
@@ -44,37 +44,9 @@ const Directions = () => {
           <Kakao />
         </MapDiv>
         <BusInfoDiv>
-        <BusStationImg src={"../BusStationInfo.png"} alt="BusStationInfo"/>
-        {/* <BusStationImg src={"directionInfo.imgUrl"} alt="BusStationInfo"/> */}
+        <BusStationImg src={directionInfo.imgUrl} alt="BusStationInfo"/>
         </BusInfoDiv>
-        {/* <SubTitleDiv>- 주소와 연락처</SubTitleDiv>
-
-        <ContentsBox>
-          <ImgBoxDiv>
-            <LocationImg src={"../location.png"} alt="location" />
-          </ImgBoxDiv>
-          <LocationInfo>경기도 수원시 팔달구 중부대로223번길 20-7</LocationInfo>
-          <ImgBoxDiv>
-            <TelImg src={"../Tel.png"} alt="Tel" />
-          </ImgBoxDiv>
-          <TelInfo>Tel. 070-5033-9006</TelInfo>
-        </ContentsBox>
-        <SubTitleDiv>- 버스 정보</SubTitleDiv>
-        <ContentsBox>
-          <BusDiv>
-            <ImgBoxDiv>
-              <BusImg src={"../Bus.png"} alt="Bus" />
-            </ImgBoxDiv>
-            <BusListDiv>
-              {BusList.map((props) => (
-                <>
-                  <BusType>{props.type}</BusType>
-                  <BusArr>{props.list}</BusArr>
-                </>
-              ))}
-            </BusListDiv>
-          </BusDiv>
-        </ContentsBox> */}
+       
       </WrapBox>
       <Footer />
     </>

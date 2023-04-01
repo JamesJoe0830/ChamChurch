@@ -7,8 +7,6 @@ const TitleDiv = styled.div`
   font-size: 1.7vw;
   font-weight: 300px;
   color: #3c4554;
-  /* text-decoration: underline 4px;
-  text-decoration-color: #B7D7AF; */
 `;
 
 export default TitleDiv;

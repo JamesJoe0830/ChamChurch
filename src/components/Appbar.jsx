@@ -6,7 +6,7 @@ import axios from "axios";
 const logo = {
   id: 1,
   imgUrl:
-    "https://user-images.githubusercontent.com/73478057/228534858-690c2a3a-2116-40f5-847e-c11d81f6268d.png",
+    "https://aiderbucket.s3.ap-northeast-2.amazonaws.com/mainlogo1.png",
 };
 
 const appBarContent = {
@@ -98,34 +98,30 @@ const AppBarDiv = styled.div`
   position: fixed;
   top: 0;
   z-index: 10;
-  width: 100%;
+  width: calc(100% - 30px);
+  padding-right: 15px;
+  padding-left: 15px;
   max-height: 95px;
-
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: black;
-  border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+  border-bottom: 1.5mm ridge rgba(211, 220, 50, 0.6);
   background-color: white;
 `;
 
 const LogoImgDiv = styled.div`
   display: flex;
-  /* min-width: 40%; */
-  width: 100px;
-  /* height: inherit; */
+  align-items: center;
 `;
 const LogoImg = styled.img`
-  width: fit-content;
-  height: inherit;
-  max-height: 100px;
-  float: left;
-  cursor: pointer;
-  padding: 10px;
+  width: 150px;
+  height: 60px;
 `;
 
 const MenuListDiv = styled.div`
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   /* width:100%; */
   /* height:100%; */
   margin: 30px;
@@ -134,7 +130,7 @@ const MenuListDiv = styled.div`
 const MenuTab = styled.div`
   display: flex;
   padding: 10px;
-  font-size: 1.5vw;
+  font-size: 20px;
   /* float: left; */
   font-weight: bold;
   cursor: pointer;

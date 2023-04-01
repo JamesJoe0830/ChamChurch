@@ -7,9 +7,7 @@ const WrapBox = styled.div`
   overflow: hidden;
   min-height: 100vh;
   position: relative;
-  padding-bottom:60px;
-  
+  padding-bottom: 60px;
 `;
-
 
 export default WrapBox;

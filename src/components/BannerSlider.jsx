@@ -9,25 +9,25 @@ const bannerList = [
   {
     id: 1,
     imagePath:
-      "https://user-images.githubusercontent.com/73478057/228507881-bae1d9d7-76e1-4f16-b842-d520eb4ec210.png",
+      "https://aiderbucket.s3.ap-northeast-2.amazonaws.com/Banner1.png",
   },
   {
     id: 2,
     imagePath:
-      "https://user-images.githubusercontent.com/73478057/228507767-08991c13-82dd-4cb1-a429-00a4aba779a7.png",
+      "https://aiderbucket.s3.ap-northeast-2.amazonaws.com/Banner2.png",
   },
 ];
 
 export default function BannerSlider() {
   const [banner, setBanner] = useState([]);
-  const getBanner = async () =>{
+  const getBanner = async () => {
     // TODO: getBanners api needed
-    
-    setBanner([...bannerList])
-  }
+
+    setBanner([...bannerList]);
+  };
   useEffect(() => {
     getBanner();
-    }, []);
+  }, []);
 
   const bannerSettings = {
     dots: true,
