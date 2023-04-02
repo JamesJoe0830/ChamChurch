@@ -3,12 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const logo = {
-  id: 1,
-  imgUrl:
-    "https://aiderbucket.s3.ap-northeast-2.amazonaws.com/mainlogo1.png",
-};
-
 const appBarContent = {
   Info: "환영합니다",
   Time: "예배시간",
@@ -22,73 +16,74 @@ const MoveToTop = () => {
 const AppBar = () => {
   const navigate = useNavigate();
 
-  const [mainLogo, setMainLogo] = useState(0);
+  const [mainLogoURL, setMainLogoURL] = useState();
   const getMainLogo = async () => {
-    //TODO: getMainLogo api needed
-    setMainLogo(logo);
+    const APIURL = "http://3.35.22.166:3100/charmjoeun/logo";
+    axios
+      .get(APIURL)
+      .then(function (response) {
+        const logoURL = response.data?.logo_img;
+        setMainLogoURL(logoURL);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
   useEffect(() => {
     getMainLogo();
   }, []);
 
-  // const fetchData = async () => {
-  //   setMainlogo(null);
-  //   // const mainLogoList = await axios.get(
-  //   //   "https://jsonplaceholder.typicode.com/photos"
-  //   //   );
-  //     setMainlogo(mainLogoList.data);
-  //   };
-  // useEffect( () => {
-  //   fetchData();
-  // }, []);
-
   return (
     <AppBarDiv>
-      <LogoImgDiv
-        onClick={() => {
-          navigate("/");
-          MoveToTop();
-        }}
-      >
-        <LogoImg src={mainLogo.imgUrl} alt="mainLogo" />
-      </LogoImgDiv>
-      <MenuListDiv>
-        <MenuTab
-          onClick={() => {
-            navigate("/welcome");
-            MoveToTop();
-          }}
-        >
-          {" "}
-          {appBarContent.Info}{" "}
-        </MenuTab>
-        <MenuTab
-          onClick={() => {
-            navigate("/time");
-            MoveToTop();
-          }}
-        >
-          {appBarContent.Time}{" "}
-        </MenuTab>
-        <MenuTab
-          onClick={() => {
-            navigate("/directions");
-            MoveToTop();
-          }}
-        >
-          {" "}
-          {appBarContent.Path}{" "}
-        </MenuTab>
-        <MenuTab
-          onClick={() => {
-            navigate("/churchLife");
-            MoveToTop();
-          }}
-        >
-          {" "}
-          {appBarContent.label}{" "}
-        </MenuTab>
-      </MenuListDiv>
+      {mainLogoURL !== undefined && mainLogoURL !== null && (
+        <>
+          <LogoImgDiv
+            onClick={() => {
+              navigate("/");
+              MoveToTop();
+            }}
+          >
+            <LogoImg src={mainLogoURL} alt="mainLogo" />
+          </LogoImgDiv>
+          <MenuListDiv>
+            <MenuTab
+              onClick={() => {
+                navigate("/welcome");
+                MoveToTop();
+              }}
+            >
+              {" "}
+              {appBarContent.Info}{" "}
+            </MenuTab>
+            <MenuTab
+              onClick={() => {
+                navigate("/time");
+                MoveToTop();
+              }}
+            >
+              {appBarContent.Time}{" "}
+            </MenuTab>
+            <MenuTab
+              onClick={() => {
+                navigate("/directions");
+                MoveToTop();
+              }}
+            >
+              {" "}
+              {appBarContent.Path}{" "}
+            </MenuTab>
+            <MenuTab
+              onClick={() => {
+                navigate("/churchLife");
+                MoveToTop();
+              }}
+            >
+              {" "}
+              {appBarContent.label}{" "}
+            </MenuTab>
+          </MenuListDiv>
+        </>
+      )}
     </AppBarDiv>
   );
 };
