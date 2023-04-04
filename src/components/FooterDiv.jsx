@@ -36,7 +36,7 @@ const FooterDiv = styled.div`
   padding-bottom: 20px;
   text-align: center;
   font-family: SpoqaHanSans;
-  font-size: 1.5vw;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0px;
   line-height: 1.6;
