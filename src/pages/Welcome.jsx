@@ -59,18 +59,21 @@ const Welcome = () => {
         </TitleDiv>
         <LineDiv />
         <ContentsBoxDiv>
-          <>
-            {introduce.map((props) => {
-              return (
-                <>
+          <>    
+            <>
+              {title !== null &&(
+              
+                {introduce.map((props) => {
+                  return (
                   <SubTitleDiv>{props.title}</SubTitleDiv>
                   <SubListDiv>
                     <Introduce2Img src={props.imagePath} alt="Introduce2" />
                   </SubListDiv>
+                  );
+                  })}
                 </>
               );
-            })}
-        
+
           </>
         </ContentsBoxDiv>
       </WrapBox>
