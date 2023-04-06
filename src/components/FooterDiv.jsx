@@ -18,8 +18,10 @@ function Footer() {
               (16497) 경기도 수원시 팔달구 중부대로223번길 20-7 (우만동)
               참조은교회
             </Address>
+            {/* <Info> */}
             <Tel>Tel. 070-5033-9006</Tel>
-            <Provided>Provide by Aidder</Provided>
+            <Provided>Provide by Aider</Provided>
+            {/* </Info> */}
           </FooterContent>
         </FooterContainer>
       </FooterDiv>
@@ -36,7 +38,7 @@ const FooterDiv = styled.div`
   padding-bottom: 20px;
   text-align: center;
   font-family: SpoqaHanSans;
-  font-size: 10px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0px;
   line-height: 1.6;
@@ -47,11 +49,18 @@ const FooterDiv = styled.div`
   margin-top: 10px;
   position: absolute;
   width: 100%;
+  @media screen and (max-width: 480px) { // 모바일 장치에 대한 스타일 조정
+    font-size: 12px;
+    padding-top: 10px;
+  }
 `;
 
 const FooterImg = styled.img`
   display: flex;
-  width: 100%;
+  width: 105%;
+  @media screen and (max-width: 480px) { // 모바일 장치에 대한 스타일 조정
+    width: 100px;
+  }
 `;
 const FooterLogoDiv = styled.div`
   display: flex;
@@ -71,11 +80,16 @@ const FooterContainer = styled.div`
 
 const FooterContent = styled.div`
   text-align: center;
+  place-self:center;
   width: 100%;
 `;
 const Address = styled.div`
   width: 100%;
   padding-top: 20px;
+  @media screen and (max-width: 480px) { // 모바일 장치에 대한 스타일 조정
+    font-size: 11.5px;
+
+  }
 `;
 const Tel = styled.div`
   width: 100%;

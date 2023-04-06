@@ -102,33 +102,58 @@ const AppBarDiv = styled.div`
   color: black;
   border-bottom: 1.5mm ridge rgba(211, 220, 50, 0.6);
   background-color: white;
+  @media screen and (max-width: 480px) {
+   height: 80px;
+  }
 `;
 
 const LogoImgDiv = styled.div`
   display: flex;
   align-items: center;
+  padding: 10px;
+  @media screen and (max-width: 480px) {
+    padding: 0px;
+  }
+  
 `;
 const LogoImg = styled.img`
   width: 150px;
   height: 60px;
+  @media screen and (max-width: 480px) {
+    width: 100px;
+    height: 40px;
+  }
 `;
 
 const MenuListDiv = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* width:100%; */
-  /* height:100%; */
   margin: 30px;
   margin-top: 40px;
+  font-size: 20px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 10px;
+  }
+
+  /* 가로로 배치 */
+  flex-direction: row;
 `;
+
 const MenuTab = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
-  font-size: 20px;
-  /* float: left; */
   font-weight: bold;
   cursor: pointer;
+  text-align: center; // 추가된 부분
+  @media screen and (max-width: 480px) {
+    width: 52px;
+    padding: 0px;
+  }
+
 `;
 
 export default AppBar;

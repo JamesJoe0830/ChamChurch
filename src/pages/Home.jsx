@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import BannerSlider from "../components/BannerSlider";
 import AppBar from "../components/Appbar";
 import HomeTitleDiv from "../styled_components/HomeTitleDiv";
-import WrapBox from "../styled_components/wrapBox";
+import WrapBox from "../styled_components/WrapBox";
 import TimeTable from "../components/Table";
 import Footer from "../components/FooterDiv";
 import AlbumSlider from "../components/AlbumSlider";

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import AppBar from "../components/Appbar";
-import WrapBox from "../styled_components/wrapBox";
+import WrapBox from "../styled_components/WrapBox";
 import Footer from "../components/FooterDiv";
 import TitleDiv from "../styled_components/TitleDiv";
 import LineDiv from "../styled_components/LineDiv";

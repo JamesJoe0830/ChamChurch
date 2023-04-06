@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import AppBar from "../components/Appbar";
-import WrapBox from "../styled_components/wrapBox";
+import WrapBox from "../styled_components/WrapBox";
 import Footer from "../components/FooterDiv";
 import TitleDiv from "../styled_components/TitleDiv";
 import LineDiv from "../styled_components/LineDiv";
@@ -121,8 +121,8 @@ function ChurchLife() {
 
         <AlbumSlider />
 
-        {/* <>
-          {blogs !== undefined && blogs !== null && blogs.length > 0 && (
+        <>
+          {/* {blogs !== undefined && blogs !== null && blogs.length > 0 && (
             <CardListBoxDiv>
               {blogs.map((blog) => {
                 return (
@@ -134,7 +134,7 @@ function ChurchLife() {
                 );
               })}
             </CardListBoxDiv>
-          )}
+          )} */}
         </>
 
         <Nav>
@@ -147,7 +147,7 @@ function ChurchLife() {
               {i + 1}
             </Button>
           ))}
-        </Nav> */}
+        </Nav>
       </WrapBox>
       <Footer />
     </>
